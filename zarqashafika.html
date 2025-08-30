@@ -6,7 +6,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f7f8;
+      background: #f4f5f8;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -46,7 +46,7 @@
     button {
       width: 100%;
       padding: 10px;
-      background: #5b4caf;
+      background: #4c4eaf;
       color: white;
       border: none;
       border-radius: 6px;
@@ -55,14 +55,14 @@
     }
 
     button:hover {
-      background: #5d42d4;
+      background: #4251d4;
     }
 
     #Nanas {
       margin-top: 20px;
       padding: 15px;
-      background: #eafbea;
-      border-left: 5px solid #7480e9;
+      background: #ecfbea;
+      border-left: 5px solid #7486e9;
       border-radius: 6px;
     }
   </style>
@@ -74,42 +74,42 @@
     <!--Form input-->
     <form id="FormZarqa">
       <label>Nama Lengkap:</label>
-      <input type="text" id="Zar" placeholder="Masukkan nama LENGKAP" required>
+      <input type="text" id="zar" placeholder="contoh: Zarqa Shafika Kaila" required>
 
       <label>Tanggal Lahir :</label>
-      <input type="date" id="tanggalLahir" required>
+      <input type="date" id="martabak" required>
 
       <label>Alamat :</label>
-      <input type="text" id="alamat" placeholder="contoh: Jl.Malaka 3hb Rt01/Rw06" required>
+      <input type="text" id="tteokbokki" placeholder="contoh: Jl.Malaka 3hb" required>
 
       <label>Umur :</label>
-      <input type="number" id="umur" placeholder="Contoh: 19" required>
+      <input type="number" id="ayam geprek" placeholder="Contoh: 18" required>
 
       <label>Email :</label>
-      <input type="email" id="email" placeholder="sangwon@email.com" required>
+      <input type="email" id="baso" placeholder="contoh: zarqashafika@email.com" required>
 
       <label>NIK :</label>
-      <input type="text" id="nik" placeholder="16 digit angka" pattern="[0-9]{16}" maxlength="16" required>
+      <input type="text" id="seblak" placeholder="contoh: 3602041211870001" pattern="[0-9]{16}" maxlength="16" required>
 
       <button type="submit">Kirim</button>
     </form>
 
-    <div id="Kaila" style="display:none;"></div>
+    <div id="zarkey" style="display:none;"></div>
   </div>
 
   <script>
     const form = document.getElementById("FormZarqa");
-    const hasil = document.getElementById("Kaila");
+    const hasil = document.getElementById("zar");
 
     form.addEventListener("submit", function(dahtau) {
       dahtau.preventDefault();
 
-      const nama = document.getElementById("Zar").value;
-      const tgl = document.getElementById("tanggalLahir").value;
-      const alamat = document.getElementById("alamat").value;
-      const umur = document.getElementById("umur").value;
-      const email = document.getElementById("email").value;
-      const nik = document.getElementById("nik").value;
+      const nama = document.getElementById("zar").value;
+      const tgl = document.getElementById("martabak").value;
+      const alamat = document.getElementById("tteokbokki").value;
+      const umur = document.getElementById("ayam geprek").value;
+      const email = document.getElementById("baso").value;
+      const nik = document.getElementById("seblak").value;
 
       hasil.style.display = "block";
       hasil.innerHTML = `
