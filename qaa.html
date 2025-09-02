@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pondok Pesantren</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    #gatau {
+      max-width: 600px;
+      margin: 30px auto;
+      background-color: #ffffff;
+      border-left: 6px solid #6c63ff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      color: #333;
+    }
+    #gatau h2 {
+      margin-top: 0;
+      color: #6c63ff;
+      font-size: 20px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="Formulir">
+    <h1 style="text-transform: uppercase; text-align:center;">
+      Formulir Pendaftaran Santri
+    </h1>
+
+    <script>
+      var yakin = confirm("Kamu yakin tetap ingin buka form ini?");
+      if (yakin) {
+        alert('Silakan membuat form sendiri');
+      } else {
+        window.location = "https://www.detik.com";
+      }
+    </script>
+
+    <form id="FormSaya">
+      <script>
+        var nama = prompt("Masukkan Nama Lengkap:", "Contoh (Nama Lengkap : Zarqa Shafika Kaila)");
+        document.write("<p><b>Nama</b></p>");
+      </script>
+      <input type="text" id="nama" required><br><br>
+
+      <script>
+        var ttl = prompt("Masukkan TTL:", "Contoh (Jkt,2,juli,2007)");
+        document.write("<p><b>TTL</b></p>");
+      </script>
+      <input type="text" id="ttl" required><br><br>
+
+      <script>
+        var gender = prompt("Masukkan Jenis Kelamin:", "Contoh (Laki-laki / Perempuan)");
+        document.write("<p><b>Jenis Kelamin</b></p>");
+      </script>
+      <select id="gender" required>
+        <option value="">-- Pilih Jenis Kelamin --</option>
+        <option value="Laki-laki">Laki-laki</option>
+        <option value="Perempuan">Perempuan</option>
+      </select><br><br>
+
+      <script>
+        var alamat = prompt("Masukkan Alamat:", "Contoh (Jl. Malaka No.111)");
+        document.write("<p><b>Alamat</b></p>");
+      </script>
+      <input type="text" id="alamat" required><br><br>
+
+      <script>
+        var telepon = prompt("Masukkan No. Telepon:", "Contoh (089528828779)");
+        document.write("<p><b>No. Telepon</b></p>");
+      </script>
+      <input type="text" id="telepon" required><br><br>
+
+      <script>
+        var lulusan = prompt("Masukkan Lulusan:", "Contoh (SD 05 Pagi)");
+        document.write("<p><b>Lulusan</b></p>");
+      </script>
+      <input type="text" id="lulusan" required><br><br>
+
+      <script>
+        var email = prompt("Masukkan Email:", "Contoh (zarqashafika@email.com)");
+        document.write("<p><b>Email</b></p>");
+      </script>
+      <input type="text" id="email" required><br><br>
+
+      <script>
+        var namapondok = prompt("Masukkan Nama Pondok:", "Contoh (Al-Baqiatussholihat)");
+        document.write("<p><b>Nama Pondok</b></p>");
+      </script>
+      <input type="text" id="namapondok" required><br><br>
+
+      <button type="submit">Kirim</button>
+    </form>
+  </div>
+
+  <div id="gatau" style="display:none;"></div>
+
+  <script>
+    const form = document.getElementById("FormSaya");
+    const hasil = document.getElementById("gatau");
+
+    form.addEventListener("submit", function(dahtau) {
+      dahtau.preventDefault();
+
+      const nama = document.getElementById("nama").value;
+      const ttl = document.getElementById("ttl").value;
+      const gender = document.getElementById("gender").value;
+      const alamat = document.getElementById("alamat").value;
+      const telepon = document.getElementById("telepon").value;
+      const lulusan = document.getElementById("lulusan").value;
+      const email = document.getElementById("email").value;
+      const namapondok = document.getElementById("namapondok").value;
+
+      hasil.style.display = "block";
+      hasil.innerHTML = `
+        <h2>DATA PRIBADI</h2>
+        <p><b>Nama:</b> ${nama}</p>
+        <p><b>TTL:</b> ${ttl}</p>
+        <p><b>Jenis Kelamin:</b> ${gender}</p>
+        <p><b>Alamat:</b> ${alamat}</p>
+        <p><b>No. Telepon:</b> ${telepon}</p>
+        <p><b>Lulusan:</b> ${lulusan}</p>
+        <p><b>Email:</b> ${email}</p>
+        <p><b>Nama Pondok:</b> ${namapondok}</p>
+      `;
+    });
+  </script>
+</body>
+</html>

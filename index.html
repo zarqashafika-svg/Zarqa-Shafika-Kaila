@@ -1,0 +1,172 @@
+:root { 
+  --primary: #b6895b;                 /* Warna utama (digunakan untuk aksen) */ 
+  --bg: #010101;                      /* Warna latar belakang (hitam pekat) */ 
+} 
+ 
+* { 
+  margin: 0;                          /* Hilangkan margin default semua elemen */ 
+  padding: 0;                         /* Hilangkan padding default semua elemen */ 
+  box-sizing: border-box;            /* Gunakan border-box untuk menghitung lebar elemen */ 
+} 
+ 
+body { 
+  font-family: "Poppins", sans-serif; /* Gunakan font Poppins */ 
+  background-color: #979a9e;          /* Warna latar belakang halaman */ 
+  color: #000000;                        /* Warna teks default putih */ 
+  margin: 0;                          /* Hilangkan margin halaman */ 
+  padding: 0;                         /* Hilangkan padding halaman */ 
+} 
+ 
+.navbar { 
+  display: flex;                      /* Navbar jadi fleksibel (horizontal) */ 
+  justify-content: space-between;    /* Spasi antara kiri dan kanan navbar */ 
+  align-items: center;               /* Tengah secara vertikal */ 
+  padding: 1.4rem 7%;                /* Padding atas/bawah dan kiri/kanan */ 
+  background-color: rgba(1, 1, 1, 0.8); /* Warna hitam semi-transparan */ 
+  border-bottom: 1px solid #513c28;  /* Garis bawah navbar */ 
+  /* position: fixed; */             /* (Opsional) Bikin navbar selalu di atas saat scroll */ 
+  top: 0;                            /* Posisi dari atas */ 
+  left: 0;                           /* Posisi dari kiri */ 
+  right: 0;                          /* Posisi dari kanan */ 
+  z-index: 9999;                     /* Supaya navbar di atas elemen lain */ 
+} 
+ 
+.tombol { 
+  background-color: rgb(195, 220, 220); /* Warna latar tombol khusus (tidak umum dipakai di navbar) */ 
+} 
+ 
+.navbar .navbar-logo { 
+  font-size: 2rem;                   /* Ukuran teks logo */ 
+  font-weight: 700;                  /* Tebal teks logo */ 
+  color: #fff;                       /* Warna putih */ 
+  font-style: italic;                /* Gaya miring */ 
+} 
+ 
+.navbar .navbar-logo span { 
+  color: var(--primary);             /* Warna aksen (dari root variable) */ 
+} 
+ 
+.navbar .navbar-nav { 
+  display: flex;                     /* Susun menu horizontal */ 
+  gap: 1rem;                         /* Jarak antar menu */ 
+} 
+ 
+.navbar .navbar-nav a { 
+  color: #fff;                       /* Warna teks putih */ 
+  font-size: 1.4rem;                 /* Ukuran teks */ 
+  text-decoration: none;            /* Hilangkan garis bawah */ 
+  transition: color 0.3s;           /* Efek halus saat hover */ 
+} 
+ 
+.navbar .navbar-nav a:hover { 
+  color: var(--primary);            /* Ubah warna saat hover */ 
+} 
+ 
+.navbar .navbar-extra { 
+  display: flex;                     /* Area tambahan di navbar (misalnya ikon) */ 
+  gap: 0.5rem;                       /* Jarak antar item */ 
+} 
+ 
+.navbar .navbar-extra a { 
+  color: #fff;                       /* Warna putih */ 
+  transition: color 0.3s;           /* Efek hover */ 
+} 
+ 
+.navbar .navbar-extra a:hover { 
+  color: var(--primary);            /* Warna saat hover */ 
+} 
+ 
+.Formulir { 
+  background: #ffffff;              /* Latar belakang putih */ 
+  max-width: 600px;                 /* Lebar maksimum formulir */ 
+  margin: 100px auto;               /* Tengah horizontal + jarak atas 100px */ 
+  padding: 30px 40px;               /* Ruang di dalam formulir */ 
+  border-radius: 12px;              /* Sudut membulat */ 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Bayangan halus */ 
+} 
+ 
+.Formulir h1 { 
+  font-size: 24px;                  /* Ukuran judul */ 
+  margin-bottom: 25px;              /* Jarak bawah */ 
+  color: #333;                      /* Warna teks abu gelap */ 
+  border-bottom: 2px solid #6c63ff; /* Garis bawah biru */ 
+  padding-bottom: 10px;             /* Jarak antara teks dan garis bawah */
+  text-align: center;               /* Tengah horizontal */ 
+  text-transform: uppercase;        /* Ubah teks jadi kapital semua */ 
+} 
+ 
+form label { 
+  display: block;                   /* Label di blok baru */ 
+  margin-bottom: 8px;               /* Jarak bawah label */ 
+  margin-top: 15px;                 /* Jarak atas antar label */ 
+  font-weight: bold;                /* Teks label tebal */ 
+  color: #444;                      /* Warna teks abu gelap */ 
+} 
+ 
+input[type="text"], 
+input[type="number"], 
+input[type="date"], 
+textarea { 
+  width: 100%;                      /* Isi seluruh lebar */ 
+  padding: 12px;                    /* Ruang dalam input */ 
+  border: 2px solid #ddd;           /* Batas abu muda */ 
+  border-radius: 8px;               /* Sudut membulat */ 
+  box-sizing: border-box;           /* Termasuk padding dan border ke lebar total */ 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Efek saat fokus */ 
+  font-size: 14px;                  /* Ukuran teks input */ 
+  background-color: #fafafa;        /* Latar input abu terang */ 
+} 
+ 
+input:focus, 
+textarea:focus { 
+  border-color: #6c63ff;            /* Garis biru saat aktif */ 
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.3); /* Bayangan fokus */ 
+  outline: none;                    /* Hilangkan outline bawaan browser */ 
+  background-color: #fff;           /* Latar putih saat aktif */ 
+} 
+ 
+textarea { 
+  resize: vertical;                 /* Hanya bisa resize vertikal */ 
+  min-height: 80px;                 /* Tinggi minimum 80px */ 
+} 
+ 
+button[type="submit"] { 
+  margin-top: 25px;                 /* Jarak atas tombol */ 
+  width: 100%;                      /* Tombol selebar form */ 
+  background-color: #6c63ff;        /* Warna latar biru */ 
+  color: #fff;                      /* Warna teks putih */ 
+  border: none;                     /* Hilangkan border */ 
+  padding: 14px;                    /* Ruang dalam tombol */ 
+  font-size: 16px;                  /* Ukuran teks tombol */ 
+  border-radius: 8px;               /* Sudut membulat */ 
+  cursor: pointer;                  /* Pointer saat hover */ 
+  transition: background-color 0.3s ease; /* Efek saat hover */ 
+} 
+ 
+button[type="submit"]:hover { 
+  background-color: #574b90;        /* Warna tombol saat hover */ 
+} 
+ 
+#hasil { 
+  max-width: 600px;                 /* Lebar maksimum hasil */ 
+  margin: 30px auto;                /* Tengah dan jarak dari atas */ 
+  background-color: #ffffff;        /* Latar putih */ 
+  border-left: 6px solid #6c63ff;   /* Garis warna di kiri */ 
+  padding: 20px 30px;               /* Padding dalam */ 
+  border-radius: 8px;               /* Sudut membulat */ 
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Bayangan halus */ 
+  color: #333;                      /* Warna teks */ 
+} 
+ 
+#hasil h2 { 
+  margin-top: 0;                    /* Hilangkan margin atas */ 
+  color: #6c63ff;                   /* Warna judul biru */ 
+  font-size: 20px;                  /* Ukuran judul */ 
+  border-bottom: 1px solid #eee;    /* Garis bawah abu muda */ 
+  padding-bottom: 10px;             /* Jarak ke bawah */ 
+} 
+ 
+#hasil p { 
+  margin: 8px 0;                    /* Jarak atas dan bawah */ 
+  line-height: 1.5;                 /* Jarak antar baris */ 
+}
